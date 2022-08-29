@@ -1,0 +1,270 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "selenium.webdriver.chrome.options",
+        "description": "selenium.webdriver.chrome.options",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.options",
+        "documentation": {}
+    },
+    {
+        "label": "ApplicationBuilder",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "MessageHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "Update",
+        "importPath": "telegram",
+        "description": "telegram",
+        "isExtraImport": true,
+        "detail": "telegram",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "fetch",
+        "kind": 2,
+        "importPath": "Auto_ru_Parsing.main",
+        "description": "Auto_ru_Parsing.main",
+        "peekOfCode": "def fetch(url, params):\n    headers = params[\"headers\"]\n    body = params[\"body\"]\n    return requests.post(url, headers = headers, data = body)\n# Сайт - Ф12 - выбрали нужные параметры в отображении и нажали \"показать предложения\" - во вкладке \"Fetch/XHR\" - \"listing\" - правой кнопкой - copy - \"Copy as Node.js fetch\"\nresponse = fetch(\"https://auto.ru/-/ajax/desktop/listing/\", {\n    \"headers\": {\n        \"accept\": \"*/*\",\n        \"accept-language\": \"ru-RU,ru;q=0.9,en-RU;q=0.8,en;q=0.7,en-US;q=0.6\",\n        \"content-type\": \"application/json\",",
+        "detail": "Auto_ru_Parsing.main",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "Auto_ru_Parsing.main",
+        "description": "Auto_ru_Parsing.main",
+        "peekOfCode": "response = fetch(\"https://auto.ru/-/ajax/desktop/listing/\", {\n    \"headers\": {\n        \"accept\": \"*/*\",\n        \"accept-language\": \"ru-RU,ru;q=0.9,en-RU;q=0.8,en;q=0.7,en-US;q=0.6\",\n        \"content-type\": \"application/json\",\n        \"sec-ch-ua\": \"\\\"Chromium\\\";v=\\\"104\\\", \\\" Not A;Brand\\\";v=\\\"99\\\", \\\"Google Chrome\\\";v=\\\"104\\\"\",\n        \"sec-ch-ua-mobile\": \"?0\",\n        \"sec-ch-ua-platform\": \"\\\"Windows\\\"\",\n        \"sec-fetch-dest\": \"empty\",\n        \"sec-fetch-mode\": \"same-origin\",",
+        "detail": "Auto_ru_Parsing.main",
+        "documentation": {}
+    },
+    {
+        "label": "lambo_data",
+        "kind": 5,
+        "importPath": "Auto_ru_Parsing.main",
+        "description": "Auto_ru_Parsing.main",
+        "peekOfCode": "lambo_data = response.json()\nfor car in lambo_data[\"offers\"]:\n    mark = car['vehicle_info']['mark_info']\n    model = car['vehicle_info']['model_info']\n    tech = car['vehicle_info']['tech_param']\n    print(f'{mark[\"name\"]} {model[\"name\"]} за {car[\"price_info\"][\"RUR\"]} руб. / {tech[\"human_name\"]}')",
+        "detail": "Auto_ru_Parsing.main",
+        "documentation": {}
+    },
+    {
+        "label": "html_file",
+        "kind": 5,
+        "importPath": "Parsing_html.Parsing_HTML",
+        "description": "Parsing_html.Parsing_HTML",
+        "peekOfCode": "html_file = open(\"skillbox.html\", \"r\")\nhtml_code = html_file.read()\nsoup = BeautifulSoup(html_code)\nlinks = soup.findAll(\"a\")\nfor link in links:\n    print(link.attrs[\"href\"])",
+        "detail": "Parsing_html.Parsing_HTML",
+        "documentation": {}
+    },
+    {
+        "label": "html_code",
+        "kind": 5,
+        "importPath": "Parsing_html.Parsing_HTML",
+        "description": "Parsing_html.Parsing_HTML",
+        "peekOfCode": "html_code = html_file.read()\nsoup = BeautifulSoup(html_code)\nlinks = soup.findAll(\"a\")\nfor link in links:\n    print(link.attrs[\"href\"])",
+        "detail": "Parsing_html.Parsing_HTML",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "Parsing_html.Parsing_HTML",
+        "description": "Parsing_html.Parsing_HTML",
+        "peekOfCode": "soup = BeautifulSoup(html_code)\nlinks = soup.findAll(\"a\")\nfor link in links:\n    print(link.attrs[\"href\"])",
+        "detail": "Parsing_html.Parsing_HTML",
+        "documentation": {}
+    },
+    {
+        "label": "links",
+        "kind": 5,
+        "importPath": "Parsing_html.Parsing_HTML",
+        "description": "Parsing_html.Parsing_HTML",
+        "peekOfCode": "links = soup.findAll(\"a\")\nfor link in links:\n    print(link.attrs[\"href\"])",
+        "detail": "Parsing_html.Parsing_HTML",
+        "documentation": {}
+    },
+    {
+        "label": "json_file",
+        "kind": 5,
+        "importPath": "Parsing_json.main",
+        "description": "Parsing_json.main",
+        "peekOfCode": "json_file = open(\"webinars.json\", \"r\")\ndata = json.load(json_file)\nfor dat in data:\n    print(dat[\"speaker\"])",
+        "detail": "Parsing_json.main",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "Parsing_json.main",
+        "description": "Parsing_json.main",
+        "peekOfCode": "data = json.load(json_file)\nfor dat in data:\n    print(dat[\"speaker\"])",
+        "detail": "Parsing_json.main",
+        "documentation": {}
+    },
+    {
+        "label": "parse_hh",
+        "kind": 2,
+        "importPath": "Selenium_Parsing.SeleniumParsing2022",
+        "description": "Selenium_Parsing.SeleniumParsing2022",
+        "peekOfCode": "def parse_hh(job_title):\n    chrome_options = Options()\n    chrome_options.add_argument(\"--headless\")  # Включаем безоконный режим\n    browser = webdriver.Chrome(options=chrome_options)\n    browser.maximize_window()\n    browser.get(\"https://spb.hh.ru/?customDomain=1\")\n    # Искать элемент можно по id, XPATH, css_selector\n    # Ищем поле ввода названия профессии\n    search_input = browser.find_element(By.ID, \"a11y-search-input\")\n    # Вводим текст в найденное поле \"a11y-search-input\"",
+        "detail": "Selenium_Parsing.SeleniumParsing2022",
+        "documentation": {}
+    },
+    {
+        "label": "browser",
+        "kind": 5,
+        "importPath": "Selenium_Parsing.SeleniumParsing2022",
+        "description": "Selenium_Parsing.SeleniumParsing2022",
+        "peekOfCode": "browser = webdriver.Chrome(ChromeDriverManager().install())\n \"\"\"\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.chrome.options import Options\nfrom telegram.ext import ApplicationBuilder, MessageHandler, filters\nfrom telegram import Update\nimport time\nimport re\nTOKEN = '5685726029:AAHO-HHXEkUU6DcxAsdFsp_UoiTHbzdfDso'",
+        "detail": "Selenium_Parsing.SeleniumParsing2022",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN",
+        "kind": 5,
+        "importPath": "Selenium_Parsing.SeleniumParsing2022",
+        "description": "Selenium_Parsing.SeleniumParsing2022",
+        "peekOfCode": "TOKEN = '5685726029:AAHO-HHXEkUU6DcxAsdFsp_UoiTHbzdfDso'\ndef parse_hh(job_title):\n    chrome_options = Options()\n    chrome_options.add_argument(\"--headless\")  # Включаем безоконный режим\n    browser = webdriver.Chrome(options=chrome_options)\n    browser.maximize_window()\n    browser.get(\"https://spb.hh.ru/?customDomain=1\")\n    # Искать элемент можно по id, XPATH, css_selector\n    # Ищем поле ввода названия профессии\n    search_input = browser.find_element(By.ID, \"a11y-search-input\")",
+        "detail": "Selenium_Parsing.SeleniumParsing2022",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Selenium_Parsing.SeleniumParsing2022",
+        "description": "Selenium_Parsing.SeleniumParsing2022",
+        "peekOfCode": "app = ApplicationBuilder().token(TOKEN).build()\nasync def hello(update: Update, _) :\n    request = update.message.text\n    await update.message.reply_text(\"Произвожу поиск, несколько секунд...\")\n    jobs_count = parse_hh(request)\n    await update.message.reply_text(f'Найдено вакансий по запросу \"{request}\": {jobs_count}')\n# Добавляем функцию hello как обработчик всех текстовых сообщений\napp.add_handler(MessageHandler(filters.TEXT, hello))\n# Запуск бота\napp.run_polling()",
+        "detail": "Selenium_Parsing.SeleniumParsing2022",
+        "documentation": {}
+    },
+    {
+        "label": "skill_html",
+        "kind": 5,
+        "importPath": "Site_parsing_lowSkill.Site_parsing",
+        "description": "Site_parsing_lowSkill.Site_parsing",
+        "peekOfCode": "skill_html = requests.get(\"https://live.skillbox.ru\")\nprint(skill_html.status_code)\nskill_soup = BeautifulSoup(skill_html.content)\nwebinars = skill_soup.findAll(class_ = \"webinar-card__title\")\nfor webinar in webinars:\n    print(webinar.string.strip())",
+        "detail": "Site_parsing_lowSkill.Site_parsing",
+        "documentation": {}
+    },
+    {
+        "label": "skill_soup",
+        "kind": 5,
+        "importPath": "Site_parsing_lowSkill.Site_parsing",
+        "description": "Site_parsing_lowSkill.Site_parsing",
+        "peekOfCode": "skill_soup = BeautifulSoup(skill_html.content)\nwebinars = skill_soup.findAll(class_ = \"webinar-card__title\")\nfor webinar in webinars:\n    print(webinar.string.strip())",
+        "detail": "Site_parsing_lowSkill.Site_parsing",
+        "documentation": {}
+    },
+    {
+        "label": "webinars",
+        "kind": 5,
+        "importPath": "Site_parsing_lowSkill.Site_parsing",
+        "description": "Site_parsing_lowSkill.Site_parsing",
+        "peekOfCode": "webinars = skill_soup.findAll(class_ = \"webinar-card__title\")\nfor webinar in webinars:\n    print(webinar.string.strip())",
+        "detail": "Site_parsing_lowSkill.Site_parsing",
+        "documentation": {}
+    }
+]
